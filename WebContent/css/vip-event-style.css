@@ -1,0 +1,66 @@
+ @import "bootstrap.min.css";
+
+.infobox{
+	width:800px;
+	border:2px solid rgba(255,255,255,0.6);
+}
+.eventTitle{
+	font-size:18px;
+	
+	text-align:center;
+	border:2px solid rgba(255,255,255,0.1);
+
+}
+.eventContent{
+	padding-top:10px;
+	height:50px;
+	font-size:19px;
+	text-align:center;
+}
+.button{
+	margin-left:200px;
+		width:100px;
+		height:35px;
+		line-height:30px; 
+		font-size:16px;
+		background-color:#333;
+		text-indent:2px;
+		border-radius:10px;
+		color:#FFF;
+		border:2px solid rgba(45,203,112,0.7);
+}
+
+.button:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+		
+		 }
+		 
+.myRadioGroup{
+	width:400px;
+	
+		border:2px solid rgba(45,203,112,0);
+	margin-bottom:10px;
+}
+
+
+.button2{
+
+		margin-bottom:20px;
+		width:100px;
+		height:35px;
+		line-height:30px; 
+		font-size:16px;
+		background-color:#333;
+		text-indent:2px;
+		border-radius:10px;
+		color:#FFF;
+		border:2px solid rgba(45,203,112,0.7);
+}
+
+.button2:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+		
+		 } 
+		 

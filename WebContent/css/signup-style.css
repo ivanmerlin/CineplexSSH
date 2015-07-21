@@ -1,0 +1,29 @@
+ @import "bootstrap.min.css";
+
+.info{
+	width:400px;
+	margin-left:40%;
+	margin-top:30px;
+}
+	
+.info a{
+	display:block;
+	margin-top:30px;
+	width:400px;
+	height:50px;
+	line-height:50px; 
+	font-size:22px;
+	text-decoration:none;
+	padding-left:20px;
+	text-indent:90px;
+	color:#555;
+	background-color:#2DCB70;
+	border:2px solid rgba(45,203,112,0.7);
+	border-radius:10px;
+}
+	
+.info a:hover{
+	color:#fff;
+	border:2px solid rgba(255,255,255,1);
+
+}

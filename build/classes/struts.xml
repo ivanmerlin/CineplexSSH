@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+      "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+      "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+	<package name="struts2" namespace="/" extends="struts-default,json-default">
+		<action name="hello" class="hello">
+			<result name="success">/1.jsp</result>
+
+		</action>
+
+		<action name="welcome" class="welcome">
+			<result name="success">/index.jsp</result>
+
+		</action>
+
+		<action name="vipRecommend" class="VipRecommend">
+			<result name="success">/vip-recommend.jsp</result>
+			 
+		</action>
+		
+		<action name="memberLogin" class="memberLogin">
+			<result name="success">/login-member.jsp</result>
+			<result name="loginSuccess" type="redirect">/vipInfo.action</result>
+		</action>
+
+		<action name="serviceLogin" class="serviceLogin">
+			<result name="success">/login-service.jsp</result>
+			<result name="loginFailed">/</result>
+			<result name="managerSuccess" type="redirect">/checkFilmPlan.action
+			</result>
+			<result name="serviceSuccess" type="redirect">/publishFilm.action
+			</result>
+<result name="bossSuccess" type="redirect">/typestatistics.action
+			</result>
+
+		</action>
+		<action name="register" class="register">
+			<result name="success">/signup.jsp</result>
+			<result name="registersuccess">/vip-activate.jsp</result>
+			<result name="fail">/RegisterFail.jsp</result>
+		</action>
+		<action name="memberQualify" class="memberQualify">
+			<result name="success">/vip-activate.jsp</result>
+			<result name="activateSuccess" type="redirect">/vipInfo.action</result>
+		</action>
+		<action name="vipInfo" class="vipInfo">
+			<result name="success">/vip-info.jsp</result>
+		</action>
+		<action name="vipCredit" class="vipInfo" method="exchange">
+			<result name="success">/vip-credit-exchange.jsp</result>
+			<result name="exchangeSuccess">/vip-exchange-success.jsp</result>
+		</action>
+		<action name="vipEdit" class="vipInfo" method="edit">
+			<result name="success">/vip-info-edit.jsp</result>
+
+		</action>
+		<action name="vipEditComplete" class="vipInfo" method="editComplete">			
+			<result name="success" type="redirect">/vipInfo.action</result>
+		</action>
+		<action name="vipRechargeInfo" class="vipInfo" method="rechargeInfo">
+			<result name="success">/vip-recharge-info.jsp</result>
+		</action>
+		<action name="vipConsumeInfo" class="vipInfo" method="consumeInfo">
+			<result name="success">/vip-consume-info.jsp</result>
+		</action>
+		
+		<action name="recharge" class="recharge">
+			<result name="success">/vip-recharge.jsp</result>
+			<result name="rechargeSuccess">/vip-rechargeSuccess.jsp</result>
+		</action>
+		<action name="vipQualify" class="vipQualify">
+			<result name="success">/vip-qualify.jsp</result>
+
+		</action>
+		<action name="publishFilm" class="publishFilm">
+			<result name="success">/service-index.jsp</result>
+
+		</action>
+		<action name="makeFilmPlan" class="makeFilmPlan">
+			<result name="success">/service-make-plan.jsp</result>
+
+		</action>
+		
+		<action name="editPlan" class="makeFilmPlan" method="edit">
+			<result name="success">/service-edit-plan.jsp</result>
+
+		</action>
+		<action name="editPlanComplete" class="makeFilmPlan" method="editComplete">
+			<result name="success" type="redirect">/editPlan.action</result>
+
+		</action>
+		
+		<action name="checkFilmPlan" class="checkFilmPlan">
+			<result name="success">/manager-index.jsp</result>
+		</action>
+		<action name="purchaseTicket" class="purchaseTicket">
+			<result name="success">/vip-purchase-ticket.jsp</result>
+			<result name="detail" type="redirect">/purchaseDetail.action</result>
+		</action>
+
+		<action name="purchaseDetail" class="purchaseDetail">
+			<result name="success">/vip-purchase-detail.jsp</result>
+			<result name="createSuccess">/vip-purchase-Success.jsp</result>
+			<result name="balanceFail">/vip-purchase-Fail.jsp</result>
+		</action>
+		<action name="orderInfo" class="orderInfo">
+			<result name="success">/vip-order-info.jsp</result>
+		</action>
+		<action name="vipCancel" class="vipCancel">
+			<result name="success">/vip-cancel.jsp</result>
+			<result name="back" type="redirect">/vipQualify.action</result>
+		</action>
+		<action name="makeEventPage" class="makeEvent">
+			<result name="success">/service-make-event.jsp</result>	
+			<result name="addAnother" type="redirect">/eventAddPlan.action</result>			
+		</action>
+		<action name="eventAddPlan" class="makeEvent" method="addPlan">
+			<result name="success">/service-event-addplan.jsp</result>	
+		</action>
+		<action name="endFilm" class="endFilm1" >
+			<result name="success">/service-end-film.jsp</result>	
+		</action>
+		<action name="sellTicketCard" class="sellTicket1" method="card" >
+			<result name="success">/service-sell-card.jsp</result>
+			 <result name="purchaseSuccess" type="redirect">/sellTicket.action</result>
+			
+			<result name="purchaseFail">/vip-purchase-Fail.jsp</result>		
+		</action>
+		<action name="sellTicketCash" class="sellTicket1" method="cash" >
+			<result name="success" type="redirect">/sellTicket.action</result>	
+		</action>
+		<action name="sellTicket" class="sellTicket1" >
+			<result name="success">/service-sell-ticket.jsp</result>	
+		</action>
+		<action name="vipEvent" class="vipEvent1" >
+			<result name="success">/vip-event.jsp</result>	
+			<result name="EventDetail">/vip-event-detail.jsp</result>	
+		</action>
+		<action name="vipEventDetail" class="vipEvent1" method="eventDetail">
+			<result name="success" type="json">
+				<param name="result">result</param>
+			</result>
+		</action>
+		<action name="select_seat" class="purchaseDetail" method="select_seat">
+			<result name="success" type="json">
+				<param name="index">index</param>
+			</result>
+		</action>
+		<action name="get_unavailable_seat" class="purchaseDetail" method="get_unavailable_seat">
+			<result name="success" type="json">
+				<param name="seatresult">seatresult</param>
+			</result>
+		</action>
+		<action name="memLogout" class="memLogout">
+			<result name="success">/index.jsp</result>	
+		</action>
+		
+		<action name="searchVipInfo" class="searchVipInfo1">
+			<result name="success">/service-search-vip.jsp</result>	
+		</action>
+		
+		<action name="searchVipComplete" class="searchVipInfo1" method="completeSearch">
+			<result name="success">/service-search-result.jsp</result>	
+		</action>
+	
+		<action name="managerSumLike" class="managerSummary" method="likeSummary">
+			<result name="success">/manager-summary-like.jsp</result>	
+		</action>
+		
+		<action name="managerSumRoom" class="managerSummary" method="roomSummary">
+			<result name="success">/manager-summary-room.jsp</result>	
+		</action>
+		
+		<action name="managerSumVip" class="managerSummary" method="vipSummary">
+			<result name="success">/manager-summary-vip.jsp</result>	
+		</action>
+		<action name="select_seat2" class="sellTicket1" method="select_seat">
+			<result name="success" type="json">
+				<param name="index">index</param>
+			</result>
+		</action>
+		<action name="get_unavailable_seat2" class="sellTicket1" method="get_unavailable_seat">
+			<result name="success" type="json">
+				<param name="seatresult">seatresult</param>
+			</result>
+		</action>
+		<action name="typestatistics" class="managerSummary" method="typestatistics">
+			<result name="success">/boss-index.jsp</result>
+		</action>
+		<action name="bossSumLike" class="managerSummary" method="likeSummary">
+			<result name="success">/boss-summary-like.jsp</result>	
+		</action>
+		
+		<action name="bossSumRoom" class="managerSummary" method="roomSummary">
+			<result name="success">/boss-summary-room.jsp</result>	
+		</action>
+		
+		<action name="bossSumVip" class="managerSummary" method="vipSummary">
+			<result name="success">/boss-summary-vip.jsp</result>	
+		</action>
+		<action name="changeratio" class="managerSummary" method="changeratio">
+			<result name="success">/boss-index2.jsp</result>	
+		</action>
+		<action name="changeratio2" class="managerSummary" method="changeratio2">
+			<result name="success">/boss-index3.jsp</result>	
+		</action>
+		<action name="postopinion" class="managerSummary" method="postopinion">
+			<result name="success" type="json">
+			</result>
+		</action>
+		<action name="datadownload" class="managerSummary" method="datadownload">
+			<result name="success" type="stream">  
+               <param name="contentType">text/plain</param>  
+               <param name="contentDisposition">attachment;fileName="${fileName}"</param>  
+               <param name="inputName">downloadFile</param>  
+               <param name="bufferSize">1024</param>  
+           </result>  
+
+		</action>
+	</package>
+</struts>

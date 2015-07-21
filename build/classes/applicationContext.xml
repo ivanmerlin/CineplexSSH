@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans         
+      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd        
+      http://www.springframework.org/schema/aop         
+      http://www.springframework.org/schema/aop/spring-aop-4.0.xsd        
+      http://www.springframework.org/schema/context         
+      http://www.springframework.org/schema/context/spring-context-4.0.xsd        
+      http://www.springframework.org/schema/tx         
+      http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+      http://www.springframework.org/schema/cache 
+      http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
+	<!-- <bean id="..." class="..."> collaborators and configuration for this 
+		bean go here </bean> <bean id="..." class="..."> collaborators and configuration 
+		for this bean go here </bean> more bean definitions go here -->
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/cineplex??useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="" />
+	</bean>
+
+	<!-- 配置sessionFactory -->
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.cineplex" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.connection.autocommit">true</prop>
+			</props>
+		</property>
+
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+
+
+	<!-- service的配置 -->
+	<bean id="helloservice" class="com.cineplex.service.HelloService">
+		<property name="abc">
+			<value>HelloWorld!</value>
+		</property>
+	</bean>
+	<bean id="loginservice" class="com.cineplex.service.LoginService">
+	</bean>
+	<bean id="registerservice" class="com.cineplex.service.RegisterService"></bean>
+	<bean id="userservice" class="com.cineplex.service.UserService"></bean>
+	<bean id="serviceuserservice" class="com.cineplex.service.ServiceUserService"></bean>
+	<bean id="filmservice" class="com.cineplex.service.FilmService"></bean>
+	<bean id="roomservice" class="com.cineplex.service.RoomService"></bean>
+	<bean id="filmplanservice" class="com.cineplex.service.FilmPlanService"></bean>
+	<bean id="orderservice" class="com.cineplex.service.OrderService"></bean>
+	<bean id="eventservice" class="com.cineplex.service.EventService"></bean>
+	<bean id="rechargeservice" class="com.cineplex.service.RechargeRecService"></bean>
+	<bean id="consumeservice" class="com.cineplex.service.ConsumeRecService"></bean>
+	<bean id="voteservice" class="com.cineplex.service.VoteService"></bean>
+	<bean id="seatservice" class="com.cineplex.service.SeatService"></bean>
+			<bean id="opinionsService" class="com.cineplex.service.OpinionsService"></bean>
+	<bean id="SchedulerTask" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass">
+			<value>com.cineplex.quartz.UserValidUpdateTask</value>
+		</property>
+	</bean>
+	<bean id="SchedulerTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="SchedulerTask" />
+		<property name="cronExpression">
+			<value>0 0 0 * * ?</value>
+		</property>
+	</bean>
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="SchedulerTaskTrigger" />
+			</list>
+		</property>
+	</bean>
+	
+	
+	
+	<!--action的配置-->
+	<bean id="hello" class="com.cineplex.action.HelloAction"></bean>
+	<bean id="welcome" class="com.cineplex.action.WelcomeAction"></bean>
+	<bean id="memberLogin" class="com.cineplex.action.MemLoginAction"></bean>
+	<bean id="serviceLogin" class="com.cineplex.action.ServLoginAction">	</bean>
+	<bean id="register" class="com.cineplex.action.RegisterAction">	</bean>
+	<bean id="memberQualify" class="com.cineplex.action.MemberQualifyAction">	</bean>
+	<bean id="vipInfo" class="com.cineplex.action.VipInfoAction">	</bean>
+	<bean id="recharge" class="com.cineplex.action.RechargeAction"></bean>
+	<bean id="vipQualify" class="com.cineplex.action.VipQualificationAction"></bean>
+	<bean id="checkFilmPlan" class="com.cineplex.action.CheckFilmPlanAction"></bean>
+	<bean id="purchaseTicket" class="com.cineplex.action.PurchaseTicketAction"></bean>
+	<bean id="purchaseDetail" class="com.cineplex.action.PurchaseDetailAction"></bean>
+	<bean id="orderInfo" class="com.cineplex.action.OrderInfoAction"></bean>
+	<bean id="vipCancel" class="com.cineplex.action.VipCancelAction"></bean>
+	<bean id="makeEvent" class="com.cineplex.action.MakeEventAction"></bean>
+	<bean id="endFilm1" class="com.cineplex.action.EndFilmAction"></bean>	
+	<bean id="sellTicket1" class="com.cineplex.action.SellTicketAction"></bean>	
+	<bean id="vipEvent1" class="com.cineplex.action.VipEventAction"></bean>
+	<bean id="memLogout" class="com.cineplex.action.MemLogoutAction"></bean>
+	<bean id="searchVipInfo1" class="com.cineplex.action.SearchVipInfoAction"></bean>
+	<bean id="managerSummary" class="com.cineplex.action.ManagerSummaryAction"></bean>
+	<bean id="VipRecommend" class="com.cineplex.action.VipRecommendAction"></bean>
+	
+	<!-- 定义 Autowired 自动注入 bean -->
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+	<!-- 扫描有注解的文件 base-package 包路径 -->
+	<context:component-scan base-package="com.cineplex" />
+	<!-- 声明式容器事务管理 ,transaction-manager指定事务管理器为transactionManager -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*User" propagation="REQUIRED" />
+			<tx:method name="*" propagation="NOT_SUPPORTED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- 定义切面，在edu.nju.onlinestock.service包及子包中所有以Service结尾的方法中,执行有关的hibernate 
+		session的事务操作 -->
+	<aop:config>
+		<!-- 只对业务逻辑层实施事务 -->
+		<aop:pointcut id="serviceOperation"
+			expression="execution( * com.cineplex.service..*Service.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
+	</aop:config>
+</beans>
+
+

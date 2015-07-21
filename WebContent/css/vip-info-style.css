@@ -1,0 +1,131 @@
+ @import "bootstrap.min.css";
+
+
+
+.infobox{
+	width:500px;
+	height:600px;
+	margin-top:40px;
+		
+	border:2px solid rgba(255,255,255,0.3);
+	
+}
+.infobox li{
+	display:inline-block;
+	height:40px;
+	width:450px;
+	margin-top:8px;
+	font-size:18px;
+	border:1px solid rgba(255,255,255,0);
+	
+}
+.infobox label{
+
+	margin-top:20px;
+width:95px;
+	
+}
+.infobox select{
+	width:100px;
+}
+.infobox input{
+	width:300px;
+}
+.infobox2 {
+	width:700px;
+	margin-top:20px;
+}
+
+.tableMy{
+	
+	width:700px;
+
+}
+
+.tableMy tr{
+	height:45px;
+
+}
+
+.tableMy tr:hover{
+	background-color:#444444;
+	
+}
+
+.tableMy td{
+	font-size:17px;
+}
+
+.creditForm{
+	width:400px;
+	height:300px;
+	display:block;
+	border:2px solid rgba(255,255,255,0 );
+}
+.creditForm input{
+	margin-top:20px;
+	margin-left:110px;
+	color:#000;
+}
+
+.button {
+		
+		margin-top:20px;
+		width:100px;
+		height:35px;
+		line-height:30px; 
+		font-size:16px;
+		background-color:#333;
+		text-indent:2px;
+		border-radius:10px;
+		color:#FFF;
+		border:2px solid rgba(45,203,112,0.7);
+}
+
+.button:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+		
+		 }
+
+.cancelForm{
+	width:400px;
+	heith:400px;
+		border:2px solid rgba(45,203,112,0 );
+}		
+<t
+.cancelForm select{
+	margin-top:20px;
+	margin-left:140px;
+	font-size:16px;
+	width:120px;
+	color:#000;
+}
+
+ 
+ .tableMy2{
+	
+	width:600px;
+
+}
+
+.tableMy2 tr{
+	height:45px;
+	width:600px;
+
+}
+
+.tableMy2 tr:hover{
+	background-color:#444444;
+	
+}
+
+.tableMy2 td{
+	font-size:17px;
+	
+}
+
+.Box{
+	margin-top:30px;
+	width:600px;
+}

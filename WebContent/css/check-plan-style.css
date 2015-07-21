@@ -1,0 +1,54 @@
+ @import "bootstrap.min.css";
+
+
+.box{
+	
+	width:600px;
+	
+}
+
+.planBox{
+	width:400px;
+	height:100px;		
+	border:2px solid rgba(255,255,255,1);
+	
+	
+}
+.box .table-hover tr:hover{
+	bgColor:#444444;
+}
+.hoverRow :hover{
+	bgColor:#444444;
+}
+
+.tipBox{
+	margin-top:30px;
+	width:600px;
+	height:80px;
+	border:2px solid rgba(255,255,255,1); 
+}
+
+.tip{
+	
+	width:600px;
+	height:58px;
+	border:1px solid rgba(255,255,255,1); 
+}
+.opinionBox{
+	margin-top:30px;
+	width:600px;
+	height:150px;
+	border:2px solid rgba(255,255,255,0); 
+}
+
+.opinion {
+	
+	width:600px;
+	height:128px;
+	border:1px solid rgba(255,255,255,0); 
+}
+.opinion .btn{
+	margin-top:5px;
+	width:200px;
+	
+}

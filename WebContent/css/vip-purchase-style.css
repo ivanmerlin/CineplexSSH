@@ -1,0 +1,164 @@
+ @import "bootstrap.min.css";
+
+.dateBox{
+	margin-top: 40px;
+	width:946px;
+	height:60px;
+	border:2px solid rgba(255,255,255,0);
+	
+}
+
+.dateWrapper{
+	margin-left:4px;
+	margin-top:3px;
+	width:130px;
+	height:50px;
+	border:2px solid rgba(10,10,10,0);
+	float:left;
+	font-size:18px;
+}
+
+.dateWrapper .dateButton{
+	width:126px;
+	height:46px;
+	font-size:18px;
+	background-color:#333333;
+	
+}
+.dateWrapper .dateButton-active{
+	width:126px;
+	height:46px;
+	font-size:18px;
+	background-color:#222222;
+	
+}
+.dateWrapper .dateButton:hover{
+	background-color:#555555;
+}
+
+
+
+.filmBox{
+	
+	margin-top:10px;
+	width:946px;
+	height:60px;
+	border:2px solid rgba(255,255,255,0);
+}
+.filmWrapper{
+	margin-left:4px;
+	margin-top:3px;
+	width:130px;
+	height:50px;
+	border:2px solid rgba(10,10,10,0);
+	float:left;
+	font-size:18px;
+}
+.filmWrapper .filmButton{
+	width:126px;
+	height:46px;
+	font-size:18px;
+	background-color:#333333;
+}
+.filmWrapper .filmButton-active{
+	width:126px;
+	height:46px;
+	font-size:18px;
+	background-color:#222222;
+	
+}
+.filmWrapper .filmButton:hover{
+	background-color:#555555;
+}
+
+
+.planWrapper{
+	margin-top:5px;
+	width:946px;
+	height:70px;
+	border:2px solid rgba(255,255,255,0.3);
+}
+
+
+.itemWrapper{
+	float:left;
+	width:100px;
+	height:60px;
+	border:1px solid rgba(255,255,255,0);
+}
+
+.planBox{
+	margin-top:15px;
+	
+
+}
+.purchaseBtn{
+	
+	color:#fff;
+	 
+	background-color:#333;
+	
+}
+.purchaseBtn:hover{
+	
+
+	background-color:#222;
+	
+}
+.planbox{
+	width:950px;
+	border:1px solid rgba(255,255,255,0.7);
+}
+.tableMy{
+	margin-top:30px;
+	width:950px;
+	display:block;
+
+	border:1px solid rgba(255,255,255,0.7);
+
+}
+
+
+.tableMy tr{
+	height:50px;
+	width:950px;
+}
+.tableMy tbody{
+	width:950px;
+
+}
+.tableMy tr:hover{
+	background-color:#444444;
+	
+}
+
+.tableMy td{
+	font-size:18px;
+	padding-top:15px;
+}
+.card {
+	width:300px;
+	margin-top:200px;
+}
+.card .info{
+	margin-top:20px
+}
+.card .button{
+	margin-top:50px;
+		width:200px;
+		height:35px;
+		line-height:30px; 
+		font-size:16px;
+		background-color:#333;
+		text-align:center;
+		border-radius:10px;
+		color:#FFF;
+		border:2px solid rgba(45,203,112,0.7);
+	
+}
+.card .button:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+		
+		 } 
+		 

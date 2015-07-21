@@ -1,0 +1,100 @@
+ @import "bootstrap.min.css";
+
+
+
+.infobox{
+	width:500px;
+	height:500px;
+	margin-top:50px;
+		
+	border:2px solid rgba(255,255,255,1);
+	
+}
+
+.form-group{
+	margin-top:20px;
+	width:300px;
+	height:70px;
+}
+
+
+
+.button{
+		color:#fff;
+		display:block;
+		margin-top:10px;
+		width:230px;
+		height:50px;
+		line-height:50px; 
+		font-size:18px;
+		text-decoration:none;
+		padding-left:20px;
+		text-indent:70px;
+		border-radius:10px;
+	 border:2px solid rgba(45,203,112,0.7);
+}
+.button:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+			text-decoration:none;
+		 }
+.button2{
+		color:#fff;
+		display:block;
+		margin-top:30px;
+		width:230px;
+		height:50px;
+		line-height:50px; 
+		font-size:22px;
+		text-decoration:none;
+		 
+		text-indent:20px;
+		border-radius:10px;
+		background-color:#333;
+	 border:2px solid rgba(255,255,155,0.3);
+}
+.button2:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+			text-decoration:none;
+			 border:2px solid rgba(255,255,155,1);
+		 }
+		 
+.box{
+	width:500px;
+	margin-top:30px;
+	border:2px solid rgba(255,255,155,0);
+
+}
+
+.box .form-control{
+	width:260px;
+}
+
+.box .button{
+		color:#fff;
+		display:block;
+		
+		width:100px;
+		height:35px;
+		line-height:35px; 
+		font-size:16px;
+		text-decoration:none;
+		text-indent:-10px;
+		border-radius:10px;
+		background-color:#333;
+	border:2px solid rgba(45,203,112,0.7);
+	
+}
+.box .button:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+			text-decoration:none;
+			 border:2px solid rgba(255,255,155,1);
+		 }	 		
+		 
+		 
+		 
+		 
+		 
+		  

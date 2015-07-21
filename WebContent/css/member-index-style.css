@@ -1,0 +1,71 @@
+ @import "bootstrap.min.css";
+	
+
+
+.panel{
+	position:relative;
+	width:800px;
+	height:800px;
+	align:center;
+	margin-left:30%;
+	margin-top:50px;
+	background-color:#333;
+}	
+.box{
+	width:800px;
+	height:350px;
+	margin-top:20px;
+	margin-left:50px;
+
+}
+
+.box .link{
+	width:300px;
+	height:350px;
+	margin-left:20px;
+	margin-right:20px;
+	float:left;
+	
+}
+
+.link .icon{
+	display:inline-block;
+	width:100%;
+	height:300px; 
+	background-color:#202020;
+	border-radius:15px;
+	padding-right:30px;
+}
+.link a{
+	display:inline-block;
+	width:230px;
+	height:50px;
+	margin-left:35px;
+	margin-top:10px;
+	border:2px solid rgba(255,255,255,0.6);
+	text-decoration:none;
+	font-weight:bolder; 
+	text-align:center;
+	padding-top:10px;
+	font-size:19px;
+	color:#fff;
+	border-radius:10px;
+}
+.link a:hover{
+	border:2px solid rgba(255,255,255,1);
+	background-color:#4ad394;
+}
+.link-vip .icon{
+
+background:url(../images/vipIcon.png) 0 0 no-repeat #202020;
+
+}
+.link-film .icon{
+background:url(../images/filmIcon.png) 0 0 no-repeat #202020;
+}
+.link-activity .icon{
+background:url(../images/activityIcon.png) 0 0 no-repeat #202020;
+}
+.link-setting .icon{
+background:url(../images/settingIcon.png) 0 0 no-repeat #202020;
+}

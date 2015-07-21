@@ -1,0 +1,49 @@
+ @import "bootstrap.min.css";
+
+
+
+.fc-input{
+	margin-top:30px;
+	display:block;
+	width:300px;
+	height:30px;
+}
+.button {
+		display:block;
+		margin-top:40px;
+		width:300px;
+		height:40px;
+		line-height:40px; 
+		font-size:17px;
+		text-decoration:none;
+		padding-left:20px;
+		text-indent:105px;
+		border-radius:10px;
+		color:#FFF;
+		border:2px solid rgba(45,203,112,0.7);
+}
+.button:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+		 text-decoration:none;
+		 }
+		 
+.button2 {
+		display:block;
+		margin-top:40px;
+		width:260px;
+		height:40px;
+		line-height:40px; 
+		font-size:17px;
+		text-decoration:none;
+
+		text-indent:95px;
+		border-radius:10px;
+		color:#FFF;
+		border:2px solid rgba(45,203,112,0.7);
+}
+.button2:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+		 text-decoration:none;
+		 }

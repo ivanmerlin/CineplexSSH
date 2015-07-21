@@ -1,0 +1,86 @@
+ @import "bootstrap.min.css";
+
+
+
+.planWrapper{
+	margin-top:50px;
+	width:800px;
+	height:40px;
+	border:2px solid rgba(255,255,255,0.6);
+}
+
+
+.itemWrapper{
+	float:left;
+	width:100px;
+	height:60px;
+	border:1px solid rgba(255,255,255,0.6);
+}
+
+.planBox{
+	margin-top:15px;
+
+}
+.seat{
+    display: inline-block;
+margin: 0 2px;
+width: 20px;
+height: 17px;
+vertical-align: middle;
+outline: 0;
+background: url(sp-seats.png) no-repeat;
+background-position: -27px 0;
+}
+.active:hover{
+    background-position: -127px 0;
+}
+.seatdisable{
+    background-position: -52px 0;
+}
+.select-seat{
+    text-align:center;
+}
+
+.button{
+	margin-top:20px;
+		width:100px;
+		height:35px;
+		line-height:30px; 
+		font-size:16px;
+		background-color:#333;
+		text-indent:2px;
+		border-radius:10px;
+		color:#FFF;
+		border:2px solid rgba(45,203,112,0.7);
+}
+
+.button:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+		
+		 }
+.btngroup{
+	margin-top:30px;
+	margin-left:850px;
+	
+}
+
+.btngroup button{
+	width:120px;
+		height:45px;
+		line-height:30px; 
+		font-size:14px;
+		background-color:#333;
+		text-indent:2px;
+		border-radius:10px;
+		color:#FFF;
+		border:2px solid rgba(45,203,112,0.7);
+	
+	
+}
+
+.btngroup button:hover{
+			background-color:#2DCB70;
+			color:#FFF;
+		
+		 }
